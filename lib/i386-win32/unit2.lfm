@@ -1,0 +1,42 @@
+object Form2: TForm2
+  Left = 943
+  Height = 340
+  Top = 340
+  Width = 416
+  Caption = 'Menu'
+  ClientHeight = 340
+  ClientWidth = 416
+  DesignTimePPI = 144
+  Menu = MainMenu1
+  object Label1: TLabel
+    Left = 168
+    Height = 29
+    Top = 120
+    Width = 72
+    Caption = 'HOME'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Name = 'Poppins SemiBold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    Left = 32
+    Top = 40
+    object MenuItem1: TMenuItem
+      Caption = 'Data Master'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Detail Data'
+      OnClick = MenuItem2Click
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Transaksi'
+      OnClick = MenuItem3Click
+    end
+  end
+end

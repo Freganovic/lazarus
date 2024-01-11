@@ -1,0 +1,232 @@
+object Form3: TForm3
+  Left = 233
+  Height = 603
+  Top = 97
+  Width = 1091
+  Caption = 'Data Master'
+  ClientHeight = 603
+  ClientWidth = 1091
+  DesignTimePPI = 144
+  object Label1: TLabel
+    Left = 416
+    Height = 30
+    Top = 8
+    Width = 296
+    Caption = 'APLIKASI DATA BARANG'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Name = 'Showcard Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 208
+    Height = 248
+    Top = 288
+    Width = 720
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 336
+    Height = 38
+    Top = 240
+    Width = 113
+    Caption = 'TAMBAH'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 505
+    Height = 38
+    Top = 240
+    Width = 113
+    Caption = 'UBAH'
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 672
+    Height = 38
+    Top = 240
+    Width = 113
+    Caption = 'HAPUS'
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 208
+    Height = 38
+    Top = 528
+    Width = 362
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 38
+    ClientWidth = 362
+    Options = []
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Left = 112
+    Height = 25
+    Top = 72
+    Width = 93
+    Caption = 'ID BARANG'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 112
+    Height = 25
+    Top = 104
+    Width = 81
+    Caption = 'KATEGORI'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 112
+    Height = 25
+    Top = 144
+    Width = 53
+    Caption = 'NAMA'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 112
+    Height = 25
+    Top = 184
+    Width = 73
+    Caption = 'GAMBAR'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 624
+    Height = 25
+    Top = 72
+    Width = 97
+    Caption = 'HARGA BELI'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 624
+    Height = 25
+    Top = 104
+    Width = 103
+    Caption = 'HARGA JUAL'
+    ParentColor = False
+    OnClick = Label7Click
+  end
+  object Label8: TLabel
+    Left = 624
+    Height = 25
+    Top = 144
+    Width = 104
+    Caption = 'ID KATEGORI'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 624
+    Height = 25
+    Top = 184
+    Width = 42
+    Caption = 'STOK'
+    ParentColor = False
+  end
+  object Edit5: TEdit
+    Left = 760
+    Height = 33
+    Top = 64
+    Width = 248
+    OnChange = Edit5Change
+    TabOrder = 5
+  end
+  object Edit6: TEdit
+    Left = 760
+    Height = 33
+    Top = 144
+    Width = 248
+    OnChange = Edit6Change
+    TabOrder = 6
+  end
+  object Edit7: TEdit
+    Left = 760
+    Height = 33
+    Top = 104
+    Width = 248
+    TabOrder = 7
+  end
+  object Edit8: TEdit
+    Left = 760
+    Height = 33
+    Top = 184
+    Width = 248
+    TabOrder = 8
+  end
+  object Edit1: TEdit
+    Left = 232
+    Height = 33
+    Top = 64
+    Width = 240
+    TabOrder = 9
+  end
+  object Edit2: TEdit
+    Left = 232
+    Height = 33
+    Top = 104
+    Width = 240
+    TabOrder = 10
+  end
+  object Edit3: TEdit
+    Left = 232
+    Height = 33
+    Top = 144
+    Width = 240
+    TabOrder = 11
+  end
+  object Edit4: TEdit
+    Left = 232
+    Height = 33
+    Top = 184
+    Width = 240
+    TabOrder = 12
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'barang_aplikasi'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Users\HP\Documents\mysql\mysql-5.7.44-win32\lib\libmysql.dll'
+    Left = 400
+    Top = 432
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM data_barang'
+    )
+    Params = <>
+    Left = 568
+    Top = 432
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 736
+    Top = 432
+  end
+end
