@@ -21,7 +21,20 @@ Link youtube :
 database
 
 form login
+
+
+
 form HOME
+
+
+
 form data master
+
+
+
+
 form detail data
+
+
+
 form transaksi
